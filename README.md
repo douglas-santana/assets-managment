@@ -84,7 +84,7 @@ $ npm run dev
 - http://localhost:3001/units para criar uma unit digite: email.
 - http://localhost:3001/assets para criar uma asset: email, image, name, description, model, status, health.
 - http://localhost:3001/getByUnitUser/Douglas para buscar os assets correspondente a unidade desse usuário.
-- - http://localhost:3001/getByUnitUser/Geral para buscar todos assets correspondente a todas as unidades.
+- http://localhost:3001/getByUnitUser/Geral para buscar todos assets correspondente a todas as unidades.
 
 ---
 ## Implementações Futuras:
