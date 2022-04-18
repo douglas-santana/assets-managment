@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateCompanyUseCase } from "./creatCompanyUseCase";
+import { CreateCompanyUseCase } from "./createCompanyUseCase";
 
 export class CreateCompanyController {
   constructor(
