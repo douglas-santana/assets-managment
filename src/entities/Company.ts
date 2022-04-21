@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 
 const UnitModel = new Schema({
   name: String,
+  userName: String,
   userId: String,
   unitId: String
 });
