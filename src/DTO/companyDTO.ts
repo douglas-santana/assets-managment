@@ -1,5 +1,5 @@
 export interface ICompanyDTO {
   name: string,
-  employee: string,
-  unit: string
+  userId: string,
+  unitId: string
 }
