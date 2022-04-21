@@ -4,6 +4,7 @@ import { createAssetController } from "./useCases/createAsset";
 import { createCompanyController } from "./useCases/createCompany";
 import { createUnitController } from "./useCases/createUnits";
 import { getAssetsByUnitController } from "./useCases/getAllAssetsByUnit";
+import { updateAssetController } from "./useCases/updateAsset";
 
 const router = Router();
 
@@ -25,6 +26,10 @@ router.post('/units', (request, response) => {
 
 router.get('/getAllAssetsByUnit/:id', (request, response) => {
   return getAssetsByUnitController.handle(request, response);
+});
+
+router.put('/updateAsset/:id', (request, response) => {
+  return updateAssetController.handle(request, response);
 });
 
 export { router };
