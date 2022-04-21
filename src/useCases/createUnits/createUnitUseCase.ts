@@ -6,7 +6,7 @@ export class CreateUnitUseCase {
     private unitRepository: IUnitRepository
   ){}
 
-  async execute(email: IUnitDTO) {
-    await this.unitRepository.findByEmail(email);
+  async execute(data: IUnitDTO) {
+    await this.unitRepository.save(data);
   }
 }

@@ -6,9 +6,9 @@ export class CreateUnitController {
     private createUnitUseCase: CreateUnitUseCase,
   ){}
   async handle(req: Request, res: Response): Promise<Response> {
-    const { email } = req.body;
+    const { userName, userId } = req.body;
     try {
-      await this.createUnitUseCase.execute(email);
+      await this.createUnitUseCase.execute({ userName, userId });
       return res.status(201).json({message: 'Unit registered!'})
     } catch (error) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})
