@@ -8,8 +8,8 @@ export class DeleteAssetController {
   async handle(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
     try {
-      const assetUpdated = await this.deleteAssetUseCase.execute(id);
-      return res.status(200).json(assetUpdated)
+      await this.deleteAssetUseCase.execute(id);
+      return res.status(200).json({ message: 'Asset deleted'})
     } catch (error) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})
     }
