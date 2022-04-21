@@ -1,4 +1,4 @@
-import { IGetAssetsByUnitRepository } from "../../repositories/IGetAssetsByUnitRepository";
+import { IGetAssetsByUnitRepository } from "../../repositories/IGetAllAssetsByUnitRepository";
 
 export class GetAssetsByUnitUseCase {
   constructor(

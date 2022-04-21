@@ -1,4 +1,4 @@
-import { IGetAssetsByUnitRepository } from "../IGetAssetsByUnitRepository";
+import { IGetAssetsByUnitRepository } from "../IGetAllAssetsByUnitRepository";
 import { IAssetDTO } from "../../DTO/assetDTO";
 import Unit from "../../entities/Unit";
 import Asset from "../../entities/Asset";

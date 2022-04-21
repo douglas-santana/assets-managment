@@ -1,6 +1,6 @@
-import { MongoGetAssetsByUnitRepository } from "../../repositories/implementations/MongoGetAssetsByUnitRepository";
-import { GetAssetsByUnitController } from "./getAssetsByUnitController";
-import { GetAssetsByUnitUseCase } from "./getAssetsByUnitUseCase";
+import { MongoGetAssetsByUnitRepository } from "../../repositories/implementations/MongoGetAllAssetsByUnitRepository";
+import { GetAssetsByUnitController } from "./getAllAssetsByUnitController";
+import { GetAssetsByUnitUseCase } from "./getAllAssetsByUnitUseCase";
 
 const mongoGetAssetsByUnitRepository = new MongoGetAssetsByUnitRepository();
 
