@@ -25,7 +25,11 @@ router.post('/units', (request, response) => {
   return createUnitController.handle(request, response);
 });
 
-router.get('/getAllAssetsByUnit/:id', (request, response) => {
+router.get('/getAllAssetsByUnit', (request, response) => {
+  return getAssetsByUnitController.handle(request, response);
+});
+
+router.get('/getAssetByUnit/:id', (request, response) => {
   return getAssetsByUnitController.handle(request, response);
 });
 
