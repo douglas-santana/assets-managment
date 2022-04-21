@@ -7,6 +7,6 @@ export class CreateAssetUseCase {
   ){}
 
   async execute(asset: IAssetDTO) {
-    await this.assetRepository.findByEmail(asset);
+    await this.assetRepository.save(asset);
   }
 }
