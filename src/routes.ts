@@ -33,7 +33,7 @@ router.put('/updateAsset/:id', (request, response) => {
   return updateAssetController.handle(request, response);
 });
 
-router.put('/deleteAsset/:id', (request, response) => {
+router.delete('/deleteAsset/:id', (request, response) => {
   return deleteAssetController.handle(request, response);
 });
 
