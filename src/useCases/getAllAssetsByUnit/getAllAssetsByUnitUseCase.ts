@@ -5,8 +5,8 @@ export class GetAssetsByUnitUseCase {
     private getAssetsByUnitRepository: IGetAssetsByUnitRepository
   ){}
 
-  async execute(id: string) {
-    const assets = await this.getAssetsByUnitRepository.findAssets(id);
+  async execute() {
+    const assets = await this.getAssetsByUnitRepository.findAssets();
     return assets;
   }
 }
