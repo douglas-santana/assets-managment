@@ -7,7 +7,6 @@ export class UpdateAssetUseCase {
   ){}
 
   async execute(id: string, data: IAssetDTO) {
-    const assets = await this.updateAssetRepository.updateAsset(id, data);
-    return assets;
+    await this.updateAssetRepository.updateAsset(id, data);
   }
 }
