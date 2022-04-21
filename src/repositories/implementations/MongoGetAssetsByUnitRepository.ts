@@ -1,19 +1,24 @@
 import { IGetAssetsByUnitRepository } from "../IGetAssetsByUnitRepository";
 import { IAssetDTO } from "../../DTO/assetDTO";
+import Unit from "../../entities/Unit";
 import Asset from "../../entities/Asset";
-
 
 export class MongoGetAssetsByUnitRepository implements IGetAssetsByUnitRepository {
   async findAssets(id: string): Promise<IAssetDTO[]> {
-    if (id === 'Roberta') {
-      const assets = await Asset.find({owner: id});
-      return assets;
+    if (id === 'all') {
+      const Allassets = await Unit.aggregate([
+        {
+          $lookup: {
+            from: "assets",
+            localField: "userId",
+            foreignField: "owner",
+            as: "assets"
+          }
+        }
+      ]);
+      return Allassets;
     }
-    if (id === 'Emerson') {
-      const assets = await Asset.find({owner: id});
-      return assets;
-    }
-    const assets = await Asset.find();
-    return assets;
+    const assetByUnitUserId = Asset.find({ owner: id })
+    return assetByUnitUserId
   }
 }

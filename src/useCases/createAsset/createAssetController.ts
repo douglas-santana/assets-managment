@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { CreateAssetUseCase } from "./createAssetUseCase";
 
-
 export class CreateAssetController {
   constructor(
     private createAssetUseCase: CreateAssetUseCase,

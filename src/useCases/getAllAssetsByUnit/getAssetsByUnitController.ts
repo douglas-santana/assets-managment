@@ -9,7 +9,7 @@ export class GetAssetsByUnitController {
     const { id } = req.params;
     try {
       const assets = await this.getAssetsByUnitUseCase.execute(id);
-      return res.status(200).json({assets})
+      return res.status(200).json(assets)
     } catch (error) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})
     }

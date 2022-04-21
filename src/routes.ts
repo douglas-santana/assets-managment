@@ -3,7 +3,7 @@ import { createUserController } from "./useCases/createUser.ts";
 import { createAssetController } from "./useCases/createAsset";
 import { createCompanyController } from "./useCases/createCompany";
 import { createUnitController } from "./useCases/createUnits";
-import { getAssetsByUnitController } from "./useCases/getAssetsByUnit";
+import { getAssetsByUnitController } from "./useCases/getAllAssetsByUnit";
 
 const router = Router();
 
@@ -23,7 +23,7 @@ router.post('/units', (request, response) => {
   return createUnitController.handle(request, response);
 });
 
-router.get('/getByUnitUser/:id', (request, response) => {
+router.get('/getAllAssetsByUnit/:id', (request, response) => {
   return getAssetsByUnitController.handle(request, response);
 });
 
