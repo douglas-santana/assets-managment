@@ -1,8 +1,8 @@
-import { IGetAssetsByUnitRepository } from "../IGetAllAssetsByUnitRepository";
+import { IGetAllAssetsByUnitRepository } from "../IGetAllAssetsByUnitRepository";
 import { IAssetDTO } from "../../DTO/assetDTO";
 import Unit from "../../entities/Unit";
 
-export class MongoGetAssetsByUnitRepository implements IGetAssetsByUnitRepository {
+export class MongoGetAllAssetsByUnitRepository implements IGetAllAssetsByUnitRepository {
   async findAssets(): Promise<IAssetDTO[]> {
     const Allassets = await Unit.aggregate([
       {

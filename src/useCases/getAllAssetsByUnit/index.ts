@@ -1,11 +1,11 @@
-import { MongoGetAssetsByUnitRepository } from "../../repositories/implementations/MongoGetAllAssetsByUnitRepository";
-import { GetAssetsByUnitController } from "./getAllAssetsByUnitController";
-import { GetAssetsByUnitUseCase } from "./getAllAssetsByUnitUseCase";
+import { MongoGetAllAssetsByUnitRepository } from "../../repositories/implementations/MongoGetAllAssetsByUnitRepository";
+import { GetAllAssetsByUnitController } from "./getAllAssetsByUnitController";
+import { GetAllAssetsByUnitUseCase } from "./getAllAssetsByUnitUseCase";
 
-const mongoGetAssetsByUnitRepository = new MongoGetAssetsByUnitRepository();
+const mongoGetAllAssetsByUnitRepository = new MongoGetAllAssetsByUnitRepository();
 
-const getAssetsByUnitUseCase = new GetAssetsByUnitUseCase(mongoGetAssetsByUnitRepository);
+const getAllAssetsByUnitUseCase = new GetAllAssetsByUnitUseCase(mongoGetAllAssetsByUnitRepository);
 
-const getAssetsByUnitController = new GetAssetsByUnitController(getAssetsByUnitUseCase);
+const getAllAssetsByUnitController = new GetAllAssetsByUnitController(getAllAssetsByUnitUseCase);
 
-export { getAssetsByUnitUseCase, getAssetsByUnitController };
+export { getAllAssetsByUnitUseCase, getAllAssetsByUnitController };

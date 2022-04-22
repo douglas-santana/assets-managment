@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
-import { GetAssetsByUnitUseCase } from "./getAllAssetsByUnitUseCase";
+import { GetAllAssetsByUnitUseCase } from "./getAllAssetsByUnitUseCase";
 
-export class GetAssetsByUnitController {
+export class GetAllAssetsByUnitController {
   constructor(
-    private getAssetsByUnitUseCase: GetAssetsByUnitUseCase,
+    private getAllAssetsByUnitUseCase: GetAllAssetsByUnitUseCase,
   ){}
   async handle(req: Request, res: Response): Promise<Response> {
     try {
-      const assets = await this.getAssetsByUnitUseCase.execute();
+      const assets = await this.getAllAssetsByUnitUseCase.execute();
       return res.status(200).json(assets)
     } catch (error) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})

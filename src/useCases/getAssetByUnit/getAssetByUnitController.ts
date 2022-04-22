@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { GetAssetByUnitUseCase } from "./getAssetByUnitUseCase";
 
-export class GetAssetsByUnitController {
+export class GetAssetByUnitController {
   constructor(
     private getAssetByUnitUseCase: GetAssetByUnitUseCase,
   ){}

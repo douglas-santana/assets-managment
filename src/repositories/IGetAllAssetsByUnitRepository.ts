@@ -1,5 +1,5 @@
 import { IAssetDTO } from "../DTO/assetDTO";
 
-export interface IGetAssetsByUnitRepository {
+export interface IGetAllAssetsByUnitRepository {
   findAssets(): Promise<IAssetDTO[]>;
 }

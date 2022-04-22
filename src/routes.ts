@@ -3,7 +3,8 @@ import { createUserController } from "./useCases/createUser.ts";
 import { createAssetController } from "./useCases/createAsset";
 import { createCompanyController } from "./useCases/createCompany";
 import { createUnitController } from "./useCases/createUnits";
-import { getAssetsByUnitController } from "./useCases/getAllAssetsByUnit";
+import { getAllAssetsByUnitController } from "./useCases/getAllAssetsByUnit";
+import { getAssetByUnitController } from "./useCases/getAssetByUnit";
 import { updateAssetController } from "./useCases/updateAsset";
 import { deleteAssetController } from "./useCases/deleteAsset";
 
@@ -26,11 +27,11 @@ router.post('/units', (request, response) => {
 });
 
 router.get('/getAllAssetsByUnit', (request, response) => {
-  return getAssetsByUnitController.handle(request, response);
+  return getAllAssetsByUnitController.handle(request, response);
 });
 
 router.get('/getAssetByUnit/:id', (request, response) => {
-  return getAssetsByUnitController.handle(request, response);
+  return getAssetByUnitController.handle(request, response);
 });
 
 router.put('/updateAsset/:id', (request, response) => {

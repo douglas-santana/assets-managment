@@ -1,12 +1,12 @@
-import { IGetAssetsByUnitRepository } from "../../repositories/IGetAllAssetsByUnitRepository";
+import { IGetAllAssetsByUnitRepository } from "../../repositories/IGetAllAssetsByUnitRepository";
 
-export class GetAssetsByUnitUseCase {
+export class GetAllAssetsByUnitUseCase {
   constructor(
-    private getAssetsByUnitRepository: IGetAssetsByUnitRepository
+    private getAllAssetsByUnitRepository: IGetAllAssetsByUnitRepository
   ){}
 
   async execute() {
-    const assets = await this.getAssetsByUnitRepository.findAssets();
+    const assets = await this.getAllAssetsByUnitRepository.findAssets();
     return assets;
   }
 }

@@ -4,7 +4,7 @@ import Asset from "../../entities/Asset";
 
 export class MongoGetAssetByUnitRepository implements IGetAssetByUnitRepository {
   async findAssets(id: string): Promise<IAssetDTO[]> {
-    const assetByUnitUserId = Asset.find({ owner: id })
-    return assetByUnitUserId
+    const assetByUnitUserId = await Asset.find({ owner: id });
+    return assetByUnitUserId;
   }
 }
