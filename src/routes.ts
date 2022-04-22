@@ -4,7 +4,7 @@ import { createAssetController } from "./useCases/createAsset";
 import { createCompanyController } from "./useCases/createCompany";
 import { createUnitController } from "./useCases/createUnits";
 import { getAllAssetsByUnitController } from "./useCases/getAllAssetsByUnit";
-import { getAssetByUnitController } from "./useCases/getAssetByUnit";
+import { getAssetByUserIdController } from "./useCases/getAssetByUserId";
 import { updateAssetController } from "./useCases/updateAsset";
 import { deleteAssetController } from "./useCases/deleteAsset";
 
@@ -30,8 +30,8 @@ router.get('/getAllAssetsByUnit', (request, response) => {
   return getAllAssetsByUnitController.handle(request, response);
 });
 
-router.get('/getAssetByUnit/:id', (request, response) => {
-  return getAssetByUnitController.handle(request, response);
+router.get('/getAssetByUserId/:id', (request, response) => {
+  return getAssetByUserIdController.handle(request, response);
 });
 
 router.put('/updateAsset/:id', (request, response) => {
