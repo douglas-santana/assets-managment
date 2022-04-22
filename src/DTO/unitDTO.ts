@@ -1,3 +1,4 @@
 export interface IUnitDTO {
-  email: string
+  userName: string,
+  userId: string
 }

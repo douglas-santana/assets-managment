@@ -2,7 +2,6 @@ import { Schema } from 'mongoose'
 import mongoose from "mongoose";
 
 const AssetModel = new Schema({
-  unitId: String,
   image: String,
   name: String,
   description: String,
