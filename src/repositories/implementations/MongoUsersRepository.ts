@@ -9,7 +9,8 @@ export class MongoUsersRepository implements IUserRepository {
     return existsEmail;
   }
 
-  async save(user: IUserDTO): Promise<void> {
-    await User.create(user);
+  async save(user: IUserDTO): Promise<IUserDTO> {
+    const createdUser = await User.create(user);
+    return createdUser;
   }
 }
