@@ -13,6 +13,7 @@ export class CreateUserUseCase {
       throw new Error('User Already Exists.')
     }
 
-    await this.usersRepository.save(data);
+    const userCreated = await this.usersRepository.save(data);
+    return userCreated;
   }
 }
