@@ -16,9 +16,6 @@
     "express": "^4.17.3",
     "mongoose": "^6.3.0"
   },
-  "compilerOptions": {
-    "esModuleInterop": true
-  },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
