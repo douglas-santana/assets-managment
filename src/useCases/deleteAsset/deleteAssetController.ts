@@ -10,7 +10,7 @@ export class DeleteAssetController {
     try {
       await this.deleteAssetUseCase.execute(id);
       return res.status(200).json({ message: 'Asset deleted'})
-    } catch (error) {
+    } catch (error: any) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})
     }
   }

@@ -10,7 +10,7 @@ export class CreateAssetController {
     try {
       await this.createAssetUseCase.execute({ image, name, description, model, owner, status, health });
       return res.status(201).json({message: 'Asset registered!'})
-    } catch (error) {
+    } catch (error: any) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})
     }
   }

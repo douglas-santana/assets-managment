@@ -10,7 +10,7 @@ export class CreateUnitController {
     try {
       await this.createUnitUseCase.execute({ userName, userId });
       return res.status(201).json({message: 'Unit registered!'})
-    } catch (error) {
+    } catch (error: any) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})
     }
   }

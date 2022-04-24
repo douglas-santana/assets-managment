@@ -11,7 +11,7 @@ export class CreateCompanyController {
     try {
       await this.createCompanyUseCase.execute({ name, userName, userId, unitId });
       return res.status(201).json({message: 'Company registred!'})
-    } catch (error) {
+    } catch (error: any) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})
     }
   }

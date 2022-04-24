@@ -12,7 +12,7 @@ export class UpdateAssetController {
     try {
       await this.updateAssetUseCase.execute(id, data);
       return res.status(200).json({message: 'Asset updated!'})
-    } catch (error) {
+    } catch (error: any) {
       return res.status(400).json({messsage: error.message || 'Internal Error.'})
     }
   }
