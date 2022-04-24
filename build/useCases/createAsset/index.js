@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createAssetController = exports.createAssetUseCase = void 0;
+const MongoAssetsRepository_1 = require("../../repositories/implementations/MongoAssetsRepository");
+const createAssetController_1 = require("./createAssetController");
+const createAssetUseCase_1 = require("./createAssetUseCase");
+const mongoAssetsRepository = new MongoAssetsRepository_1.MongoAssetsRepository();
+const createAssetUseCase = new createAssetUseCase_1.CreateAssetUseCase(mongoAssetsRepository);
+exports.createAssetUseCase = createAssetUseCase;
+const createAssetController = new createAssetController_1.CreateAssetController(createAssetUseCase);
+exports.createAssetController = createAssetController;

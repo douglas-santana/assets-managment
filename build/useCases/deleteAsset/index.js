@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteAssetController = exports.deleteAssetUseCase = void 0;
+const MongoDeleteAssetRepository_1 = require("../../repositories/implementations/MongoDeleteAssetRepository");
+const deleteAssetController_1 = require("./deleteAssetController");
+const deleteAssetUseCase_1 = require("./deleteAssetUseCase");
+const mongoDeleteAssetRepository = new MongoDeleteAssetRepository_1.MongoDeleteAssetRepository();
+const deleteAssetUseCase = new deleteAssetUseCase_1.DeleteAssetUseCase(mongoDeleteAssetRepository);
+exports.deleteAssetUseCase = deleteAssetUseCase;
+const deleteAssetController = new deleteAssetController_1.DeleteAssetController(deleteAssetUseCase);
+exports.deleteAssetController = deleteAssetController;
