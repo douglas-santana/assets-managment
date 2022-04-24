@@ -6,13 +6,13 @@ export class CreateUserController {
     private createUserUseCase: CreateUserUseCase,
   ){}
   async handle(req: Request, res: Response): Promise<Response> {
-    const { name, email, password} = req.body;
+    const { name, email, password } = req.body;
 
     try {
       const userCreated = await this.createUserUseCase.execute({ name, email, password });
-      return res.status(201).json(userCreated)
-    } catch (error) {
-      return res.status(400).json({messsage: error.message || 'Internal Error.'})
+      return res.status(201).json(userCreated);
+    } catch (error: any) {
+      return res.status(400).json({ messsage: error.messsage || 'Internal Error.' })
     }
   }
 }

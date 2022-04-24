@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createUserController } from "./useCases/createUser.ts";
+import { createUserController } from "./useCases/createUser";
 import { createAssetController } from "./useCases/createAsset";
 import { createCompanyController } from "./useCases/createCompany";
 import { createUnitController } from "./useCases/createUnits";

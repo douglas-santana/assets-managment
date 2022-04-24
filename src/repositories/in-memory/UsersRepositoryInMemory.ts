@@ -5,9 +5,9 @@ import { v4 as uuid } from "uuid";
 class UsersRepositoryInMemory implements IUserRepository {
   private users: IUserDTO[] = [];
 
-  async findByEmail(email: string): Promise<IUserDTO> {
+  async findByEmail(email: string): Promise<IUserDTO | undefined> {
     const user = this.users.find((user) => user.email === email);
-    return user;
+    return user
   }
 
   async save(user: IUserDTO): Promise<IUserDTO> {
