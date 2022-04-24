@@ -2,10 +2,9 @@
   "name": "assets-managment",
   "version": "1.0.0",
   "description": "",
-  "main": "server.ts",
+  "main": "index.js",
   "scripts": {
-    "dev": "ts-node --transpile-only --respawn --ignore-watch node_modules src/server.ts",
-    "start": "node --loader ts-node/esm src/server.ts",
+    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "test": "jest"
   },
   "keywords": [],
