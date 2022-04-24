@@ -1,4 +1,4 @@
-import { app } from "./app";
+import app from "./app";
 import { router } from "./routes";
 import 'dotenv/config'
 import { mongoConnection } from "./models/mongoConnection";
