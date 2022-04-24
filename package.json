@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "dev": "ts-node --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "start": "node --loader ts-node/esm src/server.ts",
     "test": "jest"
   },
