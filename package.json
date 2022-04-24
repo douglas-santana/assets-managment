@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
-    "start": "ts-node build/server.js",
+    "start": "node build/server.js",
     "test": "jest"
   },
   "keywords": [],
