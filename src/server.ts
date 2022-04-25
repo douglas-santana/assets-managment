@@ -10,7 +10,9 @@ app.use(router);
 mongoConnection;
 
 router.get('/', (request, response) => {
-  return response.json({message: 'heloooooo'})
+  return response.json({
+    message: 'Welcome to Asset Management API. Acess: https://github.com/douglas-santana/assets-managment for know how to use!'
+  })
 });
 
 app.listen(PORT);
