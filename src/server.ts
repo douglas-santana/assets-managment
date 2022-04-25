@@ -3,7 +3,7 @@ import { router } from "./routes";
 import 'dotenv/config'
 import { mongoConnection } from "./models/mongoConnection";
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 app.use(router);
 
