@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
+import 'dotenv/config';
+
+const PASS_MONGO_ATLAS = process.env.PASS_MONGO_ATLAS;
 
 const mongoConnection =
-mongoose.connect('mongodb+srv://testeTS:lsVQELSeMZZRPlqC@cluster0.5lucr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect(`mongodb+srv://testeTS:${PASS_MONGO_ATLAS}@cluster0.5lucr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
 
     .then((data) => {
         console.log('MongoDB Connection Succeeded', data.version);
