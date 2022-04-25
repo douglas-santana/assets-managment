@@ -9,4 +9,8 @@ app.use(router);
 
 mongoConnection;
 
+router.get('/', (request, response) => {
+  return response.json({message: 'heloooooo'})
+});
+
 app.listen(PORT);
