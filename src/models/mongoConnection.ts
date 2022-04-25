@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const mongoConnection =
-mongoose.connect('mongodb+srv://testeTS:assets123@cluster0.5lucr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://testeTS:lsVQELSeMZZRPlqC@cluster0.5lucr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 
     .then((data) => {
         console.log('MongoDB Connection Succeeded', data.version);
