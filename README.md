@@ -12,7 +12,9 @@
 
 ## :page_facing_up: Descrição
 
-Our users, Emerson and Roberta, are maintenance managers at Industria Freios Supremos (auto parts manufacturer), and they have 2 units and 10 assets (machines) in total. They would like to be able to register and view both the units separately, as well as have an overview that condenses the data from the two units.
+API Rest respeitando os princípios SOLID.
+-
+Os usuários dessa aplicação, poderão registrar e visualizar unidades e máquinas separadamente, bem como ter uma visão geral que condensa os dados das duas unidades.
 
 Atributos de um Asset são:
 - image;
@@ -21,13 +23,13 @@ Atributos de um Asset são:
 - model;
 - owner;
 - status: Running, Alerting, Stopped;
-- health: 0% to 100%.
+- health: 0% a 100%.
 
 ### Important:
-- Each asset must have an image, name, description, model, owner, status and health level;
-- Each asset is part of a unit;
-- Each unit is part of a company;
-- Every user is part of a company;
+- Cada ativo deve ter uma imagem, nome, descrição, modelo, proprietário, status e nível de integridade;
+- Cada ativo faz parte de uma unidade;
+- Cada unidade faz parte de uma empresa;
+- Cada usuário faz parte de uma empresa;
 
 
 ## 🛠 Tecnologias
@@ -44,11 +46,17 @@ Este projeto foi desenvolvido com as seguintes tecnologias
 
 ### Banco de Dados
 
-- [Mongo DB](https://www.mongodb.com/atlas/database)
+- [Mongo DB Atlas](https://www.mongodb.com/atlas/database)
 
 
 ## :clipboard: Funcionalidades
 
+  - [x] Criar usuários.
+  - [x] Criar unidades.
+  - [x] Criar companias.
+  - [x] Criar Assets.
+  - [x] Atualizar um asset.
+  - [x] Deletar um asset.
   - [x] Listar todos assets por unit geral.
   - [x] Listar todos assets por unit do usuario.
 
@@ -78,19 +86,24 @@ $ npm run dev
 
 # O app vai está rodando na porta 3001
 ```
-## :clipboard: Como utilizar:
-- http://localhost:3001/users para criar usuário é preciso digitar no body da requisição: company, name, email e password.
-- http://localhost:3001/company para criar uma company é preciso digitar: name, employee, unit.
-- http://localhost:3001/units para criar uma unit digite: email.
-- http://localhost:3001/assets para criar uma asset: email, image, name, description, model, status, health.
-- http://localhost:3001/getByUnitUser/Douglas para buscar os assets correspondente a unidade desse usuário.
-- http://localhost:3001/getByUnitUser/Geral para buscar todos assets correspondente a todas as unidades.
+## :clipboard: Como utilizar via Heroku (núvem):
+- Para consumir a API no navegador mesmo digite o endereço abaixo:
+  - https://assets-managment.herokuapp.com para a página inicial da API.
+  - https://assets-managment.herokuapp.com/getAllAssetsByUnit para mostrar todas as unidades com seus respectivos usuários e máquinas.
+  - https://assets-managment.herokuapp.com/getAssetByUserId/'id_do_usuario' para mostrar apenas as máquinas criadas pelo usuário que cadastrou.
+- Para inserir, atualizar ou deletar utilize o postman ou insomnia e digite o endereço abaixo:
+  - https://assets-managment.herokuapp.com/users para criar usuário é preciso digitar no body da requisição: name, email e password.
+  - https://assets-managment.herokuapp.com/company para criar uma company é preciso digitar: name, userName, userId, unitId.
+  - https://assets-managment.herokuapp.com/units para criar uma unit digite: userName, userId.
+  - https://assets-managment.herokuapp.com/assets para criar uma asset: image, name, description, model, owner:'id_do_usuario', status, health.
 
 ---
 ## Implementações Futuras:
-- Testar a aplicação.
-- Criar o Front.
+  - Terminar os testes unitários e criar os testes de integração.
+  - Criar o Front.
 
 ---
 Feito com ❤️ por Douglas Santana 🚀
+- [Linkedin](https://www.linkedin.com/in/douglasdns/)
+- [YouTube](https://youtu.be/8dmJ-X7inAM)
 
